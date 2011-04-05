@@ -31,5 +31,5 @@ The bundle is released under the MIT license. For more information see the
 
 [1]: http://github.com/guilhermeblanco
 [2]: https://github.com/guilhermeblanco/Doctrine2-Sluggable-Functional-Behavior
-[3]: Resources/doc/index.rst
-[4]: Resources/meta/LICENSE
+[3]: ./Resources/doc/index.rst
+[4]: ./Resources/meta/LICENSE
