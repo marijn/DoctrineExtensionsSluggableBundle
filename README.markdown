@@ -5,18 +5,27 @@ Installation
 ============
  1. Download the [Sluggable][2] extension to `vendor/doctrine-sluggable-extension`.
  2. Add both the extension and the bundle to the autoloader:
-        // add the extension source to your autoload.php
-        $loader->registerNamespaces(array('DoctrineExtensions\\Sluggable'               => __DIR__ . '/../vendor/doctrine-sluggable-functional-behavior/lib'
-                                         ,'DoctrineExtensions\\Bundle\\SluggableBundle' => __DIR__ . '/../vendor/bundles/DoctrineExtensions/Bundle'
-                                         ));
+    
+    ```php
+    <?php
+    // add the extension source to your autoload.php
+    $loader->registerNamespaces(array('DoctrineExtensions\\Sluggable'               => __DIR__ . '/../vendor/doctrine-sluggable-functional-behavior/lib'
+                                     ,'DoctrineExtensions\\Bundle\\SluggableBundle' => __DIR__ . '/../vendor/bundles/DoctrineExtensions/Bundle'
+                                     ));
+    ```
+    
  3. Register your bundle in the kernel:
-        // add this to your
-        public function registerBundles ()
-        {
-          return array(// all the framework bundles
-                      ,new DoctrineExtensions\Bundle\SluggableBundle\DoctrineExtensionsSluggableBundle
-                      );
-        }
+    
+    ```php
+    <?php
+    // add this to your
+    public function registerBundles ()
+    {
+      return array(// all the framework bundles
+                  ,new DoctrineExtensions\Bundle\SluggableBundle\DoctrineExtensionsSluggableBundle
+                  );
+    }
+    ```
 
 Documentation
 =============
@@ -29,7 +38,7 @@ License
 The bundle is released under the MIT license. For more information see the
 [license][4] file distibuted with this bundle.
 
-[1]: http://github.com/guilhermeblanco
+[1]: https://github.com/guilhermeblanco
 [2]: https://github.com/guilhermeblanco/Doctrine2-Sluggable-Functional-Behavior
-[3]: ./Resources/doc/index.rst
-[4]: ./Resources/meta/LICENSE
+[3]: https://github.com/marijn/DoctrineExtensionsSluggableBundle/blob/develop/Resources/doc/index.rst
+[4]: https://github.com/marijn/DoctrineExtensionsSluggableBundle/blob/develop/Resources/meta/LICENSE
