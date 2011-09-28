@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+  <parameters>
+    <parameter key="sluggable.subscriber.class" />
+    <parameter key="sluggable.entity_manager" />
+  </parameters>
   <services>
     <service id="sluggable.subscriber" class="%sluggable.subscriber.class%">
-      <tag name="doctrine.event_subscriber" />
+      <tag name="doctrine.event_subscriber" em="%sluggable.entity_manager%" />
     </service>
   </services>
 </container>

@@ -31,6 +31,7 @@
       $loader->load('sluggable.xml');
 
       $container->setParameter('sluggable.subscriber.class', $config['subscriber_class']);
+      $container->setParameter('sluggable.entity_manager', $config['entity_manager']);
     }
 
     /**
@@ -42,7 +43,8 @@
     {
       $arg_builder->root('doctrine_extensions_sluggable')
                     ->children()
-                      ->scalarNode('subscriber_class')->defaultValue('DoctrineExtensions\\Sluggable\\SluggableSubscriber')->end()
+                      ->scalarNode('subscriber_class')->defaultValue('DoctrineExtensions\\Sluggable\\SluggableSubscriber')->cannotBeEmpty()->end()
+                      ->scalarNode('entity_manager')->defaultValue('default')->cannotBeEmpty()->end()
                     ->end()
                   ->end();
 
